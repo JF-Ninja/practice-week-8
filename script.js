@@ -1,4 +1,4 @@
-// Function to highlight words longer than 8 characters
+
 function highlightLongWords() {
     const paragraph = document.getElementById('text');
     const words = paragraph.innerText.split(' ');
@@ -11,7 +11,6 @@ function highlightLongWords() {
     }).join(' ');
 }
 
-// Function to add a link to the source
 function addSourceLink() {
     const paragraph = document.getElementById('text');
     const sourceLink = document.createElement('a');
@@ -20,14 +19,12 @@ function addSourceLink() {
     paragraph.after(sourceLink);
 }
 
-// Function to split sentences into separate lines
 function splitSentences() {
     const paragraph = document.getElementById('text');
     const sentences = paragraph.innerHTML.split('. ').join('.<br><br>');
     paragraph.innerHTML = sentences;
 }
 
-// Function to count the number of words
 function countWords() {
     const paragraph = document.getElementById('text');
     const words = paragraph.innerText.split(' ').length;
@@ -35,7 +32,6 @@ function countWords() {
     wordCountElement.textContent = `Word count: ${words}`;
 }
 
-// Function to replace "?" with thinking face and "!" with astonished face
 function replacePunctuation() {
     const paragraph = document.getElementById('text');
     let text = paragraph.innerHTML;
@@ -44,7 +40,6 @@ function replacePunctuation() {
     paragraph.innerHTML = text;
 }
 
-// Run all functions
 highlightLongWords();
 addSourceLink();
 splitSentences();
